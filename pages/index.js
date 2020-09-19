@@ -88,14 +88,117 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    
+    <div >
+      {/* <Navbar
+        color="light"
+        light
+        expand="md"
+        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 }}
+      >
+        {" "}
+        <img
+          src={"/logo.jpg"}
+          style={{
+            height: "80px",
+            contain: "content",
+            width: "80px",
+            marginRight: 10,
+          }}
+        />
+        <NavbarBrand href="/" style={{ fontFamily: "Futura" }}>
+          Rotary Compost
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                Conozca el compostaje
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>Que es ?</DropdownItem>
+                <DropdownItem>Beneficios</DropdownItem>
+                <DropdownItem>
+                  Tecnologia que desarramos para usted
+                </DropdownItem>
+                <DropdownItem divider />
+                <DropdownItem>Contactenos</DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+          </Nav>
+          <NavbarText>Conocenos Ahora!</NavbarText>
+          <img
+            src={"/whatsapp.png"}
+            style={{
+              height: "30px",
+              contain: "content",
+              width: "30px",
+              marginRight: 10,
+              marginLeft: 10,
+            }}
+          />
+        </Collapse>
+      </Navbar> */}
+      <div
+        style={{
+          width: "100%",
+          //height: "5%",
+          display: "flex",
+          flexDirection: "row",
+          padding: 10,
+          //alignItems: "stretch",
+          position: "relative",
+        }}
+      >
+        <img
+          src={"logogreen.jpg"}
+          style={{
+            width: "100%",
+            filter: "brightness(0.3)",
+            objectFit: "cover",
+            minWidth: "600px",
+          }}
+        ></img>
+        {/* <img
+          src={"logogrey.jpg"}
+          style={{ width: "50%", filter: "brightness(0.3)" }}
+        ></img> */}
+        <div
+          style={{
+            position: "absolute",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            display: "flex",
+            
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "Futura",
+              paddingRight: 50,
+              paddingLeft: 50,
+              marginBottom: 20,
+              marginTop: 20,
+              fontWeight: "bold",
+              color: "white",
+              alignSelf: "center",
+              fontSize: "5vw",
+            }}
+          >
+            Rotary Compost, inovación para el desarrollo sostenible de tu empresa y el
+            planeta.
+          </p>
+        </div>
+      </div>
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          
         }}
       >
         <img
@@ -275,7 +378,7 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: '50%' }}>
+        <div style={{ width: '80%' }}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
@@ -308,118 +411,8 @@ const Example = (props) => {
           Ventajas Sorprendentes con ROTARY COMPOST
         </p>
       </div>
-    
+    </div>
   );
 };
 
 export default Example;
-
-      {/* <Navbar
-        color="light"
-        light
-        expand="md"
-        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 }}
-      >
-        {" "}
-        <img
-          src={"/logo.jpg"}
-          style={{
-            height: "80px",
-            contain: "content",
-            width: "80px",
-            marginRight: 10,
-          }}
-        />
-        <NavbarBrand href="/" style={{ fontFamily: "Futura" }}>
-          Rotary Compost
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Conozca el compostaje
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Que es ?</DropdownItem>
-                <DropdownItem>Beneficios</DropdownItem>
-                <DropdownItem>
-                  Tecnologia que desarramos para usted
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Contactenos</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Conocenos Ahora!</NavbarText>
-          <img
-            src={"/whatsapp.png"}
-            style={{
-              height: "30px",
-              contain: "content",
-              width: "30px",
-              marginRight: 10,
-              marginLeft: 10,
-            }}
-          />
-        </Collapse>
-      </Navbar> */}
-      {/* <div
-        style={{
-          width: "100%",
-          height:500,
-          //height: "5%",
-          display: "flex",
-          flexDirection: "row",
-          padding: 10,
-          //alignItems: "stretch",
-          position: "relative",
-        }}
-      >
-        <img
-          src={"logogreen.jpg"}
-          style={{
-            width: "100%",
-            filter: "brightness(0.3)",
-            objectFit: "cover",
-            minWidth: "600px",
-          }}
-        ></img>
-        
-        <div
-          style={{
-            position: "absolute",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "Futura",
-              paddingRight: 50,
-              paddingLeft: 50,
-              marginBottom: 20,
-              marginTop: 20,
-              fontWeight: "bold",
-              color: "white",
-              alignSelf: "center",
-              fontSize: "5vw",
-            }}
-          >
-            Rotary Compost, inovación para el desarrollo sostenible de tu empresa y el
-            planeta.
-          </p>
-        </div>
-      </div> */}
-      {/* width: "100%",
-          //height: "5%",
-          display: "flex",
-          flexDirection: "row",
-          padding: 10,
-          //alignItems: "stretch",
-          position: "relative", */}
