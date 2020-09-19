@@ -215,10 +215,16 @@ const Example = (props) => {
         </Collapse>
       </Navbar>
       <AwesomeSlider animation="cubeAnimation">
-      <div data-src="logogreen.jpg">
+      {/* <div data-src="logogreen.jpg">
+      <p>I want to see what you got.</p>
+    </div> */}
+    <div data-src="carousel2.png">
       <p>I want to see what you got.</p>
     </div>
-    <div data-src="carousel2.png">
+    <div data-src="carousel3.png">
+      <p>I want to see what you got.</p>
+    </div>
+    <div data-src="carousel4.png">
       <p>I want to see what you got.</p>
     </div>
     {/* <div data-src="/path/to/image.jpg">
