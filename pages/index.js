@@ -142,8 +142,8 @@ const Example = (props) => {
       </Navbar>
       <div
         style={{
-          width: "100%",
-          //height: "5%",
+          //width: "100%",
+          height: "400px",
           display: "flex",
           flexDirection: "row",
           padding: 10,
@@ -176,32 +176,23 @@ const Example = (props) => {
             
           }}
         > 
-        <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
         <p
-            style={{
-              fontFamily: "Futura",
-              
-              fontWeight: "bold",
-              color: "white",
-              alignSelf: "center",
-              fontSize: "5vw",
-              filter: "drop-shadow(0 0 0.75rem green)"
-            }}
-          >Rotary Compost, </p>
-          <p
             style={{
               fontFamily: "Futura",          
               fontWeight: "bold",
               color: "white",
               alignSelf: "center",
               fontSize: "5vw",
-              marginTop:'10%'
+              marginTop:'10%',
+              paddingRight: 50,
+              paddingLeft: 50,
+              marginBottom: 20,
+              marginTop: 20,
             }}
           >
-            inovación para el desarrollo sostenible de tu empresa y el
+            Rotary Compost, inovación para el desarrollo sostenible de tu empresa y el
             planeta.
           </p>
-          </div>
         </div>
       </div>
       <div
