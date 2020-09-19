@@ -396,7 +396,8 @@ const Example = (props) => {
     overflow: "hidden",
     borderWidth: 3,
     borderColor: "red",
-    padding:30}}>
+    //padding:30
+    }}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
