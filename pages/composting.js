@@ -89,7 +89,7 @@ const Example = (props) => {
 
   return (
     <div style={{}}>
-      <Navbar
+      {/* <Navbar
         color="light"
         light
         expand="md"
@@ -111,12 +111,7 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {/* <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem> */}
+            
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Conozca el compostaje
@@ -144,7 +139,7 @@ const Example = (props) => {
             }}
           />
         </Collapse>
-      </Navbar>
+      </Navbar> */}
       <div
         style={{
           width: "100%",
