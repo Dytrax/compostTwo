@@ -154,7 +154,7 @@ const Example = (props) => {
         <img
           src={"logogreen.jpg"}
           style={{
-            height:300,
+            //height:300,
             width: "100%",
             filter: "brightness(0.3)",
             objectFit: 'cover',
@@ -175,23 +175,33 @@ const Example = (props) => {
             display: "flex",
             
           }}
-        >
-          <p
+        > 
+        <div style={{display:'flex',flexDirection:'row',justifyContent:'center',alignItems:'center'}}>
+        <p
             style={{
               fontFamily: "Futura",
-              paddingRight: 50,
-              paddingLeft: 50,
-              marginBottom: 20,
-              marginTop: 20,
+              
               fontWeight: "bold",
               color: "white",
               alignSelf: "center",
               fontSize: "5vw",
+              filter: "drop-shadow(0 0 0.75rem green)"
+            }}
+          >Rotary Compost, </p>
+          <p
+            style={{
+              fontFamily: "Futura",          
+              fontWeight: "bold",
+              color: "white",
+              alignSelf: "center",
+              fontSize: "5vw",
+              marginTop:'10%'
             }}
           >
-            Rotary Compost, inovación para el desarrollo sostenible de tu empresa y el
+            inovación para el desarrollo sostenible de tu empresa y el
             planeta.
           </p>
+          </div>
         </div>
       </div>
       <div
@@ -380,7 +390,12 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: '80%' }}>
+        <div style={{ width: '48%',// width: 150,
+    height: '',
+    borderRadius: 150 / 2,
+    overflow: "hidden",
+    borderWidth: 3,
+    borderColor: "red"}}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
