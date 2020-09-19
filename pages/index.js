@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Link from "next/link";
+import AwesomeSlider from "react-awesome-slider";
 import {
   Collapse,
   Navbar,
@@ -82,25 +84,94 @@ const items = [
     key: "9",
   },
 ];
+
+const carouselPrincipal = [
+  {
+    src:
+      "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22800%22%20height%3D%22400%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20800%20400%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_15ba800aa1d%20text%20%7B%20fill%3A%23555%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A40pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_15ba800aa1d%22%3E%3Crect%20width%3D%22800%22%20height%3D%22400%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22285.921875%22%20y%3D%22218.3%22%3EFirst%20slide%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E",
+    altText: "Slide 1",
+    caption: "Slide 1",
+    header: "Slide 1 Header",
+    key: "1",
+  },
+  {
+    src: "p2.jpeg",
+    altText: "Slide 1",
+    caption: "Slide 1",
+    header: "Slide 1 Header",
+    key: "2",
+  },
+  {
+    src: "p3.jpeg",
+
+    key: "3",
+  },
+  {
+    src: "p4.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "4",
+  },
+  {
+    src: "p5.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "5",
+  },
+  {
+    src: "p6.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "6",
+  },
+  {
+    src: "p7.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "7",
+  },
+  {
+    src: "p8.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "8",
+  },
+  {
+    src: "p9.jpeg",
+    //altText: 'Slide 1',
+    //caption: 'Slide 1',
+    //header: 'Slide 1 Header',
+    key: "9",
+  },
+];
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div >
+    <div>
       <Navbar
         color="light"
         light
         expand="md"
-        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 ,marginBottom:50}}
+        style={{
+          filter: "drop-shadow(0 0 0.75rem green)",
+          zIndex: 100,
+          marginBottom: 50,
+        }}
       >
         {" "}
         <img
           src={"/logopng.png"}
           style={{
             height: "80px",
-            objectFit:'cover',
+            objectFit: "cover",
             width: "200px",
             marginRight: 10,
           }}
@@ -111,7 +182,6 @@ const Example = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Conozca el compostaje
@@ -127,74 +197,42 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Conocenos Ahora!</NavbarText>
-          <img
-            src={"/whatsapp.png"}
-            style={{
-              height: "30px",
-              contain: "content",
-              width: "30px",
-              marginRight: 10,
-              marginLeft: 10,
-            }}
-          />
+          <Link href={"https://wa.link/cgrrkz"}>
+            <NavbarText>Conocenos Ahora!</NavbarText>
+          </Link>
+          <Link href={"https://wa.link/cgrrkz"}>
+            <img
+              src={"/whatsapp.png"}
+              style={{
+                height: "30px",
+                contain: "content",
+                width: "30px",
+                marginRight: 10,
+                marginLeft: 10,
+              }}
+            />
+          </Link>
         </Collapse>
       </Navbar>
-      <div
-        style={{
-          //width: "100%",
-          height: "400px",
-          display: "flex",
-          flexDirection: "row",
-          //padding: 10,
-          //alignItems: "stretch",
-          position: "relative",
-        }}
-      >
-        <img
-          src={"logogreen.jpg"}
-          style={{
-            //height:300,
-            width: "100%",
-            filter: "brightness(0.3)",
-            objectFit: 'cover',
-            //minWidth: "600px",
-          }}
-        ></img>
-        {/* <img
-          src={"logogrey.jpg"}
-          style={{ width: "50%", filter: "brightness(0.3)" }}
-        ></img> */}
-        <div
-          style={{
-            position: "absolute",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            height: "100%",
-            display: "flex",
-            
-          }}
-        > 
-        <p
-            style={{
-              fontFamily: "Futura",          
-              fontWeight: "bold",
-              color: "white",
-              alignSelf: "center",
-              fontSize: "5.3vw",
-              marginTop:'10%',
-              paddingRight: 50,
-              paddingLeft: 50,
-              marginBottom: 0,
-              marginTop: 20,
-            }}
-          >
-            Rotary Compost, inovación para el desarrollo sostenible de tu empresa y el
-            planeta.
-          </p>
-        </div>
-      </div>
+      <AwesomeSlider animation="cubeAnimation">
+      <div data-src="logogreen.jpg">
+      <p>I want to see what you got.</p>
+    </div>
+    <div data-src="carousel2.png">
+      <p>I want to see what you got.</p>
+    </div>
+    {/* <div data-src="/path/to/image.jpg">
+      <p>The answer is -- Don't think about it.</p>
+    </div>
+    <div data-src="/path/to/image.jpg">
+      <p>Sometimes science is more art than science.</p>
+    </div>
+    <div data-src="/path/to/image.jpg">
+      <p>Love, connection, experience.</p>
+    </div>
+        */}
+      </AwesomeSlider>
+
       <div
         style={{
           display: "flex",
@@ -227,15 +265,15 @@ const Example = (props) => {
         </p>
 
         {/*  <p style={{filter: "drop-shadow(0 0 0.75rem green)", fontFamily:'Futura',color:'rgb(8,133,67)'}}>Beneficios De Compostar</p> */}
-        <ul style={{
+        <ul
+          style={{
             fontFamily: "Futura",
             paddingRight: 50,
             paddingLeft: 50,
             marginBottom: 20,
             marginTop: 20,
-            
-            
-          }}>
+          }}
+        >
           <li>
             Reduce la cantidad de materia orgánica que va a los vertederos.
           </li>
@@ -266,7 +304,7 @@ const Example = (props) => {
             width: "250px",
             objectFit: "cover",
             marginTop: 100,
-            marginBottom:50
+            marginBottom: 50,
           }}
         />
 
@@ -389,16 +427,19 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: '80%',// width: 150,
-        
-        maxWidth:800,
-    height: '',
-    //borderRadius: 200 / 2,
-    overflow: "hidden",
-    borderWidth: 3,
-    borderColor: "red",
-    //padding:30
-    }}>
+        <div
+          style={{
+            width: "80%", // width: 150,
+
+            maxWidth: 800,
+            height: "",
+            //borderRadius: 200 / 2,
+            overflow: "hidden",
+            borderWidth: 3,
+            borderColor: "red",
+            //padding:30
+          }}
+        >
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
@@ -431,33 +472,31 @@ const Example = (props) => {
           Ventajas Sorprendentes con ROTARY COMPOST
         </p>
 
-        <ul style={{
+        <ul
+          style={{
             fontFamily: "Futura",
             paddingRight: 50,
             paddingLeft: 50,
             marginBottom: 20,
             marginTop: 20,
-            
-            
-          }}>
+          }}
+        >
           <li>
-          Simple de Operar y Mantener, CÁRGALO, CIÉRRALO Y DESPREOCÚPATE.
+            Simple de Operar y Mantener, CÁRGALO, CIÉRRALO Y DESPREOCÚPATE.
+          </li>
+          <li>Operación de bajo costo, mínima energía eléctrica requerida.</li>
+          <li>
+            Más rápidos y más eficientes en la descomposición del material.
           </li>
           <li>
-          Operación de bajo costo, mínima energía eléctrica requerida.
+            Seguridad e higiene al procesar la mortalidad y demás residuos
+            orgánicos.
           </li>
           <li>
-          Más rápidos y más eficientes en la descomposición del material.
+            Contribuye con la reducción de residuos enviados a disposición
+            final.
           </li>
-          <li>
-          Seguridad e higiene al procesar la mortalidad y demás residuos orgánicos.
-          </li>
-          <li>
-          Contribuye con la reducción de residuos enviados a disposición final.
-          </li>
-          <li>
-          Elimina la contaminación del suelo, agua y aire.
-          </li>
+          <li>Elimina la contaminación del suelo, agua y aire.</li>
         </ul>
       </div>
     </div>
