@@ -233,7 +233,7 @@ const Example = (props) => {
             paddingLeft: 50,
             marginBottom: 20,
             marginTop: 20,
-            fontWeight: "bold",
+            
             
           }}>
           <li>
@@ -389,12 +389,13 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: 600,// width: 150,
+        <div style={{ width: 500,// width: 150,
     height: '',
     borderRadius: 200 / 2,
     overflow: "hidden",
     borderWidth: 3,
-    borderColor: "red"}}>
+    borderColor: "red",
+    padding:10}}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
