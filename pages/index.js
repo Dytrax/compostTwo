@@ -89,7 +89,7 @@ const Example = (props) => {
 
   return (
     <div >
-      {/* <Navbar
+      <Navbar
         color="light"
         light
         expand="md"
@@ -139,7 +139,7 @@ const Example = (props) => {
             }}
           />
         </Collapse>
-      </Navbar> */}
+      </Navbar>
       <div
         style={{
           width: "100%",
@@ -157,7 +157,7 @@ const Example = (props) => {
             height:300,
             width: "100%",
             filter: "brightness(0.3)",
-            objectFit: "cover",
+            objectFit: 'cover',
             //minWidth: "600px",
           }}
         ></img>
