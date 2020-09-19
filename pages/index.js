@@ -390,7 +390,7 @@ const Example = (props) => {
           introduce la fuente de carbono.
         </p>
         <div style={{ width: '100%',// width: 150,
-        maxWidth:'80%',
+        maxWidth:600,
     height: '',
     borderRadius: 300 / 2,
     overflow: "hidden",
