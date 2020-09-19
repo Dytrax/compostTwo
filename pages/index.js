@@ -275,7 +275,7 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: 500 }}>
+        <div style={{ width: '50%' }}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
