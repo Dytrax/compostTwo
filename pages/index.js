@@ -184,8 +184,8 @@ const Example = (props) => {
               alignSelf: "center",
               fontSize: "5.3vw",
               marginTop:'10%',
-              paddingRight: 50,
-              paddingLeft: 50,
+              //paddingRight: 50,
+              //paddingLeft: 50,
               marginBottom: 0,
               marginTop: 20,
             }}
