@@ -93,21 +93,21 @@ const Example = (props) => {
         color="light"
         light
         expand="md"
-        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 }}
+        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 ,marginBottom:20}}
       >
         {" "}
         <img
-          src={"/logo.jpg"}
+          src={"/logopng.png"}
           style={{
             height: "80px",
-            contain: "content",
-            width: "80px",
+            objectFit:'cover',
+            width: "200px",
             marginRight: 10,
           }}
         />
-        <NavbarBrand href="/" style={{ fontFamily: "Futura" }}>
+        {/* <NavbarBrand href="/" style={{ fontFamily: "Futura" }}>
           Rotary Compost
-        </NavbarBrand>
+        </NavbarBrand> */}
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
@@ -257,6 +257,7 @@ const Example = (props) => {
             width: "250px",
             objectFit: "cover",
             marginTop: 100,
+            marginBottom:50
           }}
         />
 
