@@ -227,7 +227,15 @@ const Example = (props) => {
         </p>
 
         {/*  <p style={{filter: "drop-shadow(0 0 0.75rem green)", fontFamily:'Futura',color:'rgb(8,133,67)'}}>Beneficios De Compostar</p> */}
-        <ul>
+        <ul style={{
+            fontFamily: "Futura",
+            paddingRight: 50,
+            paddingLeft: 50,
+            marginBottom: 20,
+            marginTop: 20,
+            fontWeight: "bold",
+            
+          }}>
           <li>
             Reduce la cantidad de materia orgánica que va a los vertederos.
           </li>
