@@ -221,12 +221,16 @@ const Example = (props) => {
     <div data-src="carousel2.png">
       
     </div>
-    <div data-src="carousel3.png">
-     
-    </div>
-    <div data-src="carousel4.png">
+    <div data-src="carousel5.png">
       
     </div>
+    <div data-src="p1.jpeg">
+     
+    </div>
+    <div data-src="p5.jpeg">
+      
+    </div>
+    
     {/* <div data-src="/path/to/image.jpg">
       <p>The answer is -- Don't think about it.</p>
     </div>
