@@ -389,7 +389,7 @@ const Example = (props) => {
           se ingresa el material orgánico a descomponer y la otra por donde se
           introduce la fuente de carbono.
         </p>
-        <div style={{ width: 500,// width: 150,
+        <div style={{ width: '100%',// width: 150,
     height: '',
     borderRadius: 200 / 2,
     overflow: "hidden",
