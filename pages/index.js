@@ -172,6 +172,7 @@ const Example = (props) => {
             width: "100%",
             height: "100%",
             display: "flex",
+
           }}
         >
           <p
@@ -198,6 +199,7 @@ const Example = (props) => {
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
+          width: "100%",
         }}
       >
         <img
