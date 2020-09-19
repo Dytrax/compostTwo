@@ -429,6 +429,35 @@ const Example = (props) => {
         >
           Ventajas Sorprendentes con ROTARY COMPOST
         </p>
+
+        <ul style={{
+            fontFamily: "Futura",
+            paddingRight: 50,
+            paddingLeft: 50,
+            marginBottom: 20,
+            marginTop: 20,
+            
+            
+          }}>
+          <li>
+          Simple de Operar y Mantener, CÁRGALO, CIÉRRALO Y DESPREOCÚPATE.
+          </li>
+          <li>
+          Operación de bajo costo, mínima energía eléctrica requerida.
+          </li>
+          <li>
+          Más rápidos y más eficientes en la descomposición del material.
+          </li>
+          <li>
+          Seguridad e higiene al procesar la mortalidad y demás residuos orgánicos.
+          </li>
+          <li>
+          Contribuye con la reducción de residuos enviados a disposición final.
+          </li>
+          <li>
+          Elimina la contaminación del suelo, agua y aire.
+          </li>
+        </ul>
       </div>
     </div>
   );
