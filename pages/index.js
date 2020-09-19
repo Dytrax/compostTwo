@@ -140,7 +140,7 @@ const Example = (props) => {
           />
         </Collapse>
       </Navbar> */}
-      <div
+      {/* <div
         style={{
           width: "100%",
           height:500,
@@ -161,10 +161,7 @@ const Example = (props) => {
             minWidth: "600px",
           }}
         ></img>
-        {/* <img
-          src={"logogrey.jpg"}
-          style={{ width: "50%", filter: "brightness(0.3)" }}
-        ></img> */}
+        
         <div
           style={{
             position: "absolute",
@@ -193,7 +190,7 @@ const Example = (props) => {
             planeta.
           </p>
         </div>
-      </div>
+      </div> */}
       {/* width: "100%",
           //height: "5%",
           display: "flex",
