@@ -93,7 +93,7 @@ const Example = (props) => {
         color="light"
         light
         expand="md"
-        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 ,marginBottom:20}}
+        style={{ filter: "drop-shadow(0 0 0.75rem green)", zIndex: 100 ,marginBottom:50}}
       >
         {" "}
         <img
@@ -182,11 +182,11 @@ const Example = (props) => {
               fontWeight: "bold",
               color: "white",
               alignSelf: "center",
-              fontSize: "5vw",
+              fontSize: "5.3vw",
               marginTop:'10%',
               paddingRight: 50,
               paddingLeft: 50,
-              marginBottom: 20,
+              marginBottom: 0,
               marginTop: 20,
             }}
           >
@@ -208,7 +208,7 @@ const Example = (props) => {
           style={{
             width: "400px",
             objectFit: "cover",
-            marginTop: 100,
+            marginTop: 50,
             marginBottom: 50,
           }}
         />
