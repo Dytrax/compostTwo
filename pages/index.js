@@ -154,10 +154,11 @@ const Example = (props) => {
         <img
           src={"logogreen.jpg"}
           style={{
+            height:300,
             width: "100%",
             filter: "brightness(0.3)",
             objectFit: "cover",
-            minWidth: "600px",
+            //minWidth: "600px",
           }}
         ></img>
         {/* <img
