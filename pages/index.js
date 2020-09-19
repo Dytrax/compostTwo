@@ -88,7 +88,7 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div >
+    <div style={{width:'100%'}}>
       {/* <Navbar
         color="light"
         light
@@ -143,6 +143,7 @@ const Example = (props) => {
       <div
         style={{
           width: "100%",
+          height:500,
           //height: "5%",
           display: "flex",
           flexDirection: "row",
@@ -193,13 +194,20 @@ const Example = (props) => {
           </p>
         </div>
       </div>
+      {/* width: "100%",
+          //height: "5%",
+          display: "flex",
+          flexDirection: "row",
+          padding: 10,
+          //alignItems: "stretch",
+          position: "relative", */}
       <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           flexDirection: "column",
-          width: "100%",
+          
         }}
       >
         <img
