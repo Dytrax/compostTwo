@@ -392,7 +392,7 @@ const Example = (props) => {
         <div style={{ width: '100%',// width: 150,
         maxWidth:800,
     height: '',
-    borderRadius: 200 / 2,
+    //borderRadius: 200 / 2,
     overflow: "hidden",
     borderWidth: 3,
     borderColor: "red",
