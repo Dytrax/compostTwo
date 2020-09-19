@@ -88,7 +88,7 @@ const Example = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div style={{}}>
+    <div >
       {/* <Navbar
         color="light"
         light
@@ -154,16 +154,16 @@ const Example = (props) => {
         <img
           src={"logogreen.jpg"}
           style={{
-            width: "50%",
+            width: "100%",
             filter: "brightness(0.3)",
             objectFit: "cover",
             minWidth: "600px",
           }}
         ></img>
-        <img
+        {/* <img
           src={"logogrey.jpg"}
           style={{ width: "50%", filter: "brightness(0.3)" }}
-        ></img>
+        ></img> */}
         <div
           style={{
             position: "absolute",
