@@ -390,12 +390,13 @@ const Example = (props) => {
           introduce la fuente de carbono.
         </p>
         <div style={{ width: '100%',// width: 150,
+        maxWidth:'80%',
     height: '',
-    borderRadius: 200 / 2,
+    borderRadius: 300 / 2,
     overflow: "hidden",
     borderWidth: 3,
     borderColor: "red",
-    padding:10}}>
+    padding:30}}>
           <UncontrolledCarousel color={"red"} items={items} />
         </div>
         <p
