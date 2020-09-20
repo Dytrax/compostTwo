@@ -221,7 +221,20 @@ const Example = (props) => {
     <div data-src="carousel2.png">
       
     </div>
-    <div data-src="carousel5.png">
+    <div data-src="carousel12.png" >
+      
+    </div>
+    <div style={{
+            display:"inline-block",
+            height:"100%",
+            width:"100%",
+            backgroundImage:"url('carousel11.png')",
+            backgroundRepeat:"no-repeat",
+            backgroundPosition: "0px 0px",
+            backgroundSize:'150% 150%'
+            //backgroundColor:'red'
+            
+        }}>
       
     </div>
     <div data-src="p1.jpeg">
