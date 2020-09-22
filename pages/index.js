@@ -150,6 +150,7 @@ const carouselPrincipal = [
     key: "9",
   },
 ];
+const VariableUrl = 'http://localhost:3000'
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -215,6 +216,14 @@ const Example = (props) => {
           </Link>
         </Collapse>
       </Navbar>
+      {/* <iframe
+      src="https://drive.google.com/file/d/1l5cX3cov-IAVoMY55fSXirbc_KGko2fd/preview">
+
+      </iframe> */}
+      <iframe style={{alignSelf:'center',width:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/cbZWXX0TDlg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+       
+      
+     
       <AwesomeSlider animation="cubeAnimation" style={{width:'100%'}}>
       {/* <div data-src="logogreen.jpg">
       <p>I want to see what you got.</p>
@@ -533,9 +542,22 @@ const Example = (props) => {
     </div>
   );
 };
-const sendEmailBuyer = (email,clientMessage) =>{
-  const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
-  
+//
+const sendEmailBuyer  = async (email,clientMessage) =>{
+  const resp = await fetch(VariableUrl+'api/addclient', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: data.email.value,
+      message: data.name.value,
+      
+    })
+  });
+  //const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
+  const message = `Hola mi correo es ${email}, encontre Rotary Compost en internet te dejo este mensaje a continuación : ${clientMessage}.}`
+
   const messageUserJson = {
     phone:'props.phone.value',
     value:'props.productValue'
@@ -543,10 +565,30 @@ const sendEmailBuyer = (email,clientMessage) =>{
   console.log("enviando")
   console.log(email)
   console.log(clientMessage)
-  //sendContactMail("carlos.gs.andres@gmail.com",'this.name.value',"carlos.gs.andres@gmail.com",message)
+  sendContactMail("carlos.gs.andres@gmail.com",'Rotary Compost AutoMessage',"carlos.gs.andres@gmail.com",message)
 /*   sendContactMail(props.email.value,"Leonardo Espinosa de MiPagoSeguro","mipagoseguro.col@gmail.com",messageUserJson) */
 
 }
+/* 
+async function handleRegisterBackend(data) {
+   
+  setLoading(true)
+  const resp = await fetch(VariableUrl+'api/signup', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      email: data.email.value,
+      name: data.name.value,
+      age: data.age.value,
+      password: data.password.value,
+      nationality: data.nationality.value,
+      mobile: data.mobile.value
+    })
+  });
+  
+  const json = await resp.json(); */
 
 const ContactContainer = () => {
   const [email, setEmail] = useState('');
