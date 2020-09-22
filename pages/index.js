@@ -224,7 +224,10 @@ const Example = (props) => {
     <div data-src="carousel12.png" >
       
     </div>
-    <div style={{
+    {/* <div data-src="carousel33.png" >
+      
+    </div> */}
+    {/* <div style={{
             display:"inline-block",
             height:"100%",
             width:"100%",
@@ -236,7 +239,7 @@ const Example = (props) => {
             
         }}>
       
-    </div>
+    </div> */}
     <div data-src="p1.jpeg">
      
     </div>
