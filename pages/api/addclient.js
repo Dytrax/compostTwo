@@ -1,6 +1,6 @@
 import dbConnect from '../../utils/dbConect';
 import Client from '../../utils/dbModels/Client'
-import { hash } from 'bcrypt'
+
 import Cors from 'cors'
 import initMiddleware from '../../lib/init-middleware'
 dbConnect();
