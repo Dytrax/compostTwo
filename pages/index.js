@@ -163,9 +163,9 @@ const Example = (props) => {
         light
         expand="md"
         style={{
-          filter: "drop-shadow(0 0 0.75rem green)",
+          filter: "drop-shadow(0 0 0.4rem lime)",
           zIndex: 100,
-          marginBottom: 50,
+          //marginBottom: 50,
         }}
       >
         {" "}
@@ -220,7 +220,10 @@ const Example = (props) => {
       src="https://drive.google.com/file/d/1l5cX3cov-IAVoMY55fSXirbc_KGko2fd/preview">
 
       </iframe> */}
-      <iframe style={{alignSelf:'center',width:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/cbZWXX0TDlg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div style={{display:'flex',justifyContent:'center',alignItems:'center',background:'rgb(30,30,30)',paddingTop:50,paddingBottom:30}}>
+      <iframe style={{alignSelf:'center',width:'800px',maxWidth:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/cbZWXX0TDlg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
        
       
      
@@ -555,6 +558,8 @@ const sendEmailBuyer  = async (email,clientMessage) =>{
       
     })
   });
+  const json = await resp.json();
+  console.log(json)
   //const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
   const message = `Hola mi correo es ${email}, encontre Rotary Compost en internet te dejo este mensaje a continuación : ${clientMessage}.}`
 

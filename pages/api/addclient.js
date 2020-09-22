@@ -1,5 +1,5 @@
-import dbConnect from '../../utils/dbConnect';
-import User from '../../models/UsersRankea2s'
+import dbConnect from '../../utils/dbConect';
+import Client from '../../utils/dbModels/Client'
 import { hash } from 'bcrypt'
 import Cors from 'cors'
 import initMiddleware from '../../lib/init-middleware'
@@ -21,33 +21,24 @@ export default async (req, res) => {
    
     switch (method) {
         case 'POST':
-                var email = req.body.email
-                //Encript the Password
-                const userExist =  await User.findOne({email})
-                if(userExist){
-                    return res.status(400).json({ success: false,message:'El usuario ya existe' });
-                }
-                console.log(userExist)
-                hash(req.body.password, 10 , async function(err, hash) {
-                //user data structure
+                
+                
                 var userData = {
-                    name: req.body.name,
+                    
                     email: req.body.email,
-                    nationality: req.body.nationality,
-                    password: hash,
-                    mobile: req.body.mobile,
-                    age:req.body.age
+                    message: req.body.message,
+                    
                 }
                 
                 //Async function to create the User in mongoDB
                 try{
                 
-                const user = await User.create(userData);
-                res.status(200).json({ success: true, data: user });
+                const client = await Client.create(userData);
+                res.status(200).json({ success: true, data: client });
                 } catch (error) {
                     res.status(400).json({ success: false,e:error });
                 }
-            });
+                ;
             break;
         case 'GET':
             try {
