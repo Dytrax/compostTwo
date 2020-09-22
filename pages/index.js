@@ -222,12 +222,12 @@ const Example = (props) => {
     <div data-src="carousel2.png">
       
     </div>
-    <div data-src="carousel12.png" >
+   {/*  <div data-src="carousel12.png" >
       
     </div>
     <div data-src="carousel44.png" >
       
-    </div>
+    </div> */}
     {/* <div data-src="carousel33.png" >
       
     </div> */}
@@ -533,7 +533,7 @@ const Example = (props) => {
     </div>
   );
 };
-const sendEmailBuyer = () =>{
+const sendEmailBuyer = (email,clientMessage) =>{
   const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
   
   const messageUserJson = {
@@ -541,12 +541,17 @@ const sendEmailBuyer = () =>{
     value:'props.productValue'
   }
   console.log("enviando")
-  sendContactMail("carlos.gs.andres@gmail.com",'this.name.value',"carlos.gs.andres@gmail.com",message)
+  console.log(email)
+  console.log(clientMessage)
+  //sendContactMail("carlos.gs.andres@gmail.com",'this.name.value',"carlos.gs.andres@gmail.com",message)
 /*   sendContactMail(props.email.value,"Leonardo Espinosa de MiPagoSeguro","mipagoseguro.col@gmail.com",messageUserJson) */
 
 }
 
 const ContactContainer = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
   return(
       <div className='contact-container bg-grey' style={{width:'100%'}}>
           <span className="div-title">Contactenos</span>
@@ -576,9 +581,9 @@ const ContactContainer = () => {
                       Hola, dejanos un mensaje con gusto te atenderemos.
                   </span>
 
-                  <input type="text" placeholder=" Correo" className="input-field"/>
-                  <textarea name="" id="" cols="30" rows="10" placeholder=" Mensaje"></textarea>
-                  <button className="contact-btn" onClick={sendEmailBuyer}>Enviar</button>
+                  <input onChange={(event)=>{setEmail(event.target.value)}} type="text" placeholder=" Correo" className="input-field"/>
+                  <textarea onChange={(event)=>{setMessage(event.target.value)}} name="" id="" cols="30" rows="10" placeholder=" Mensaje"></textarea>
+                  <button className="contact-btn" onClick={()=>{sendEmailBuyer(email,message)}}>Enviar</button>
               </div>
           </div>
           
