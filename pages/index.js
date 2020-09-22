@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import AwesomeSlider from "react-awesome-slider";
+import sendContactMail from '../service/service'
 import {
   Collapse,
   Navbar,
@@ -214,7 +215,7 @@ const Example = (props) => {
           </Link>
         </Collapse>
       </Navbar>
-      <AwesomeSlider animation="cubeAnimation">
+      <AwesomeSlider animation="cubeAnimation" style={{width:'100%'}}>
       {/* <div data-src="logogreen.jpg">
       <p>I want to see what you got.</p>
     </div> */}
@@ -222,6 +223,9 @@ const Example = (props) => {
       
     </div>
     <div data-src="carousel12.png" >
+      
+    </div>
+    <div data-src="carousel44.png" >
       
     </div>
     {/* <div data-src="carousel33.png" >
@@ -525,8 +529,62 @@ const Example = (props) => {
           <li>Elimina la contaminación del suelo, agua y aire.</li>
         </ul>
       </div>
+      <ContactContainer/>
     </div>
   );
 };
+const sendEmailBuyer = () =>{
+  const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
+  
+  const messageUserJson = {
+    phone:'props.phone.value',
+    value:'props.productValue'
+  }
+  console.log("enviando")
+  sendContactMail("carlos.gs.andres@gmail.com",'this.name.value',"carlos.gs.andres@gmail.com",message)
+/*   sendContactMail(props.email.value,"Leonardo Espinosa de MiPagoSeguro","mipagoseguro.col@gmail.com",messageUserJson) */
+
+}
+
+const ContactContainer = () => {
+  return(
+      <div className='contact-container bg-grey' style={{width:'100%'}}>
+          <span className="div-title">Contactenos</span>
+          <div className='contact-form'>
+              <div id='sect1'>
+                  <span>Contactenos, trabajamos 24h para usted.</span>
+                  <span>
+                      <i className="fas fa-map-marker-alt"></i>
+                      Cali, Colombia
+                  </span>
+                  <span>
+                      <i className="fas fa-mobile-alt"></i>
+                      +316 633 9189
+                  </span>
+                  <span>
+                      <i className="far fa-envelope"></i>
+                      rossina.sanclemente@eogroup.com
+                  </span>
+                  <span>
+                      <i className="far fa-envelope"></i>
+                      Asesor Comercial
+                  </span>
+              </div>
+                  
+              <div id='sect2'>
+                  <span>
+                      Hola, dejanos un mensaje con gusto te atenderemos.
+                  </span>
+
+                  <input type="text" placeholder=" Correo" className="input-field"/>
+                  <textarea name="" id="" cols="30" rows="10" placeholder=" Mensaje"></textarea>
+                  <button className="contact-btn" onClick={sendEmailBuyer}>Enviar</button>
+              </div>
+          </div>
+          
+      </div>
+  );
+
+}
 
 export default Example;

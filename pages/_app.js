@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'; */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-awesome-slider/dist/styles.css';
 import 'react-awesome-slider/dist/custom-animations/cube-animation.css';
+import "./spicex.css";
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
 }
