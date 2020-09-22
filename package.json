@@ -11,6 +11,7 @@
     "axios": "^0.20.0",
     "bootstrap": "^4.5.2",
     "cors": "^2.8.5",
+    "mongoose": "^5.10.6",
     "next": "9.5.3",
     "nodemailer": "^6.4.11",
     "nodemailer-express-handlebars": "^4.0.0",
