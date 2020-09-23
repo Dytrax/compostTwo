@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import AwesomeSlider from "react-awesome-slider";
-import sendContactMail from '../service/service'
+import sendContactMail from "../service/service";
 import {
   Collapse,
   Navbar,
@@ -150,7 +150,7 @@ const carouselPrincipal = [
     key: "9",
   },
 ];
-const VariableUrl = 'http://localhost:3000'
+const VariableUrl = "http://localhost:3000";
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -169,21 +169,23 @@ const Example = (props) => {
         }}
       >
         {" "}
-        <img
-          src={"/logopng.png"}
-          style={{
-            height: "80px",
-            objectFit: "cover",
-            width: "200px",
-            marginRight: 10,
-          }}
-        />
+        <div style={{width:'100%'}}>
+          <img
+            src={"/logopng.png"}
+            style={{
+              height: "80px",
+              objectFit: "cover",
+              width: "200px",
+              marginRight: 10,
+            }}
+          />
+        </div>
         {/* <NavbarBrand href="/" style={{ fontFamily: "Futura" }}>
           Rotary Compost
         </NavbarBrand> */}
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
+        {/* <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar> */}
+          {/* <Nav className="mr-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Conozca el compostaje
@@ -198,52 +200,68 @@ const Example = (props) => {
                 <DropdownItem>Contactenos</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
-          </Nav>
-          <Link href={"https://wa.link/cgrrkz"}>
-            <NavbarText>Conocenos Ahora!</NavbarText>
-          </Link>
-          <Link href={"https://wa.link/cgrrkz"}>
-            <img
-              src={"/whatsapp.png"}
-              style={{
-                height: "30px",
-                contain: "content",
-                width: "30px",
-                marginRight: 10,
-                marginLeft: 10,
-              }}
-            />
-          </Link>
-        </Collapse>
+          </Nav> */}
+          <div style={{ display:'flex',flexDirection:'row',alignItems:'center'}}>
+            <Link href={"https://wa.link/cgrrkz"} style={{ float: "right" }}>
+              <NavbarText style={{ float: "right" }}>
+                Conocenos Ahora!
+              </NavbarText>
+            </Link>
+            <Link href={"https://wa.link/cgrrkz"}>
+              <img
+                src={"/whatsapp.png"}
+                style={{
+                  height: "30px",
+                  contain: "content",
+                  width: "30px",
+                  marginRight: 10,
+                  marginLeft: 10,
+                }}
+              />
+            </Link>
+          </div>
+        {/* </Collapse> */}
       </Navbar>
       {/* <iframe
       src="https://drive.google.com/file/d/1l5cX3cov-IAVoMY55fSXirbc_KGko2fd/preview">
 
       </iframe> */}
-      <div style={{display:'flex',justifyContent:'center',alignItems:'center',background:'rgb(30,30,30)',paddingTop:50,paddingBottom:30}}>
-      <iframe style={{alignSelf:'center',width:'800px',maxWidth:'100%'}} width="560" height="315" src="https://www.youtube.com/embed/cbZWXX0TDlg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          background: "rgb(30,30,30)",
+          paddingTop: 50,
+          paddingBottom: 30,
+        }}
+      >
+        <iframe
+          style={{ alignSelf: "center", width: "800px", maxWidth: "100%" }}
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/cbZWXX0TDlg"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
       </div>
-       
-      
-     
-      <AwesomeSlider animation="cubeAnimation" style={{width:'100%'}}>
-      {/* <div data-src="logogreen.jpg">
+
+      <AwesomeSlider animation="cubeAnimation" style={{ width: "100%" }}>
+        {/* <div data-src="logogreen.jpg">
       <p>I want to see what you got.</p>
     </div> */}
-    <div data-src="carousel2.png">
-      
-    </div>
-   {/*  <div data-src="carousel12.png" >
+        <div data-src="carousel2.png"></div>
+        {/*  <div data-src="carousel12.png" >
       
     </div>
     <div data-src="carousel44.png" >
       
     </div> */}
-    {/* <div data-src="carousel33.png" >
+        {/* <div data-src="carousel33.png" >
       
     </div> */}
-    {/* <div style={{
+        {/* <div style={{
             display:"inline-block",
             height:"100%",
             width:"100%",
@@ -256,14 +274,10 @@ const Example = (props) => {
         }}>
       
     </div> */}
-    <div data-src="p1.jpeg">
-     
-    </div>
-    <div data-src="p5.jpeg">
-      
-    </div>
-    
-    {/* <div data-src="/path/to/image.jpg">
+        <div data-src="p1.jpeg"></div>
+        <div data-src="p5.jpeg"></div>
+
+        {/* <div data-src="/path/to/image.jpg">
       <p>The answer is -- Don't think about it.</p>
     </div>
     <div data-src="/path/to/image.jpg">
@@ -541,39 +555,42 @@ const Example = (props) => {
           <li>Elimina la contaminación del suelo, agua y aire.</li>
         </ul>
       </div>
-      <ContactContainer/>
+      <ContactContainer />
     </div>
   );
 };
 //
-const sendEmailBuyer  = async (email,clientMessage) =>{
-  const resp = await fetch(VariableUrl+'api/addclient', {
-    method: 'POST',
+const sendEmailBuyer = async (email, clientMessage) => {
+  const resp = await fetch(VariableUrl + "api/addclient", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       email: data.email.value,
       message: data.name.value,
-      
-    })
+    }),
   });
   const json = await resp.json();
-  console.log(json)
+  console.log(json);
   //const message = `Pago seguro completo con comprado ${'props.email.value'}, correo: ${'props.productValue'}, phone:${'props.phone.value'}`
-  const message = `Hola mi correo es ${email}, encontre Rotary Compost en internet te dejo este mensaje a continuación : ${clientMessage}.}`
+  const message = `Hola mi correo es ${email}, encontre Rotary Compost en internet te dejo este mensaje a continuación : ${clientMessage}.}`;
 
   const messageUserJson = {
-    phone:'props.phone.value',
-    value:'props.productValue'
-  }
-  console.log("enviando")
-  console.log(email)
-  console.log(clientMessage)
-  sendContactMail("carlos.gs.andres@gmail.com",'Rotary Compost AutoMessage',"carlos.gs.andres@gmail.com",message)
-/*   sendContactMail(props.email.value,"Leonardo Espinosa de MiPagoSeguro","mipagoseguro.col@gmail.com",messageUserJson) */
-
-}
+    phone: "props.phone.value",
+    value: "props.productValue",
+  };
+  console.log("enviando");
+  console.log(email);
+  console.log(clientMessage);
+  sendContactMail(
+    "carlos.gs.andres@gmail.com",
+    "Rotary Compost AutoMessage",
+    "carlos.gs.andres@gmail.com",
+    message
+  );
+  /*   sendContactMail(props.email.value,"Leonardo Espinosa de MiPagoSeguro","mipagoseguro.col@gmail.com",messageUserJson) */
+};
 /* 
 async function handleRegisterBackend(data) {
    
@@ -596,47 +613,66 @@ async function handleRegisterBackend(data) {
   const json = await resp.json(); */
 
 const ContactContainer = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-  return(
-      <div className='contact-container bg-grey' style={{width:'100%'}}>
-          <span className="div-title">Contactenos</span>
-          <div className='contact-form'>
-              <div id='sect1'>
-                  <span>Contactenos, trabajamos 24h para usted.</span>
-                  <span>
-                      <i className="fas fa-map-marker-alt"></i>
-                      Cali, Colombia
-                  </span>
-                  <span>
-                      <i className="fas fa-mobile-alt"></i>
-                      +316 633 9189
-                  </span>
-                  <span>
-                      <i className="far fa-envelope"></i>
-                      rossina.sanclemente@eogroup.com
-                  </span>
-                  <span>
-                      <i className="far fa-envelope"></i>
-                      Asesor Comercial
-                  </span>
-              </div>
-                  
-              <div id='sect2'>
-                  <span>
-                      Hola, dejanos un mensaje con gusto te atenderemos.
-                  </span>
+  return (
+    <div className="contact-container bg-grey" style={{ width: "100%" }}>
+      <span className="div-title">Contactenos</span>
+      <div className="contact-form">
+        <div id="sect1">
+          <span>Contactenos, trabajamos 24h para usted.</span>
+          <span>
+            <i className="fas fa-map-marker-alt"></i>
+            Cali, Colombia
+          </span>
+          <span>
+            <i className="fas fa-mobile-alt"></i>
+            +316 633 9189
+          </span>
+          <span>
+            <i className="far fa-envelope"></i>
+            rossina.sanclemente@eogroup.com
+          </span>
+          <span>
+            <i className="far fa-envelope"></i>
+            Asesor Comercial
+          </span>
+        </div>
 
-                  <input onChange={(event)=>{setEmail(event.target.value)}} type="text" placeholder=" Correo" className="input-field"/>
-                  <textarea onChange={(event)=>{setMessage(event.target.value)}} name="" id="" cols="30" rows="10" placeholder=" Mensaje"></textarea>
-                  <button className="contact-btn" onClick={()=>{sendEmailBuyer(email,message)}}>Enviar</button>
-              </div>
-          </div>
-          
+        <div id="sect2">
+          <span>Hola, dejanos un mensaje con gusto te atenderemos.</span>
+
+          <input
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+            type="text"
+            placeholder=" Correo"
+            className="input-field"
+          />
+          <textarea
+            onChange={(event) => {
+              setMessage(event.target.value);
+            }}
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder=" Mensaje"
+          ></textarea>
+          <button
+            className="contact-btn"
+            onClick={() => {
+              sendEmailBuyer(email, message);
+            }}
+          >
+            Enviar
+          </button>
+        </div>
       </div>
+    </div>
   );
-
-}
+};
 
 export default Example;
